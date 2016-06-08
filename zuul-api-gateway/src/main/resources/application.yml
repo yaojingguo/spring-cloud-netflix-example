@@ -1,0 +1,16 @@
+server:
+  port: 8090
+
+zuul:
+  routes:
+    httpbin:
+      path: /get/**
+      url: http://httpbin.org/get
+    hello:
+      path: /hello-service/**
+      serviceId: eureka-client-service-provider
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

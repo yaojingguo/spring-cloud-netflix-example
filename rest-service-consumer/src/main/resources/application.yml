@@ -1,0 +1,5 @@
+server:
+  port: 8083
+
+zuul: http://localhost:8090
+serviceId: eureka-client-service-provider
